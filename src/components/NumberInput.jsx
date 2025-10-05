@@ -15,7 +15,6 @@ export const NumberInput = ({
     if (!regex.test(newValue) && newValue !== "") return;
 
     const numericValue = parseFloat(newValue);
-
     if (!allowZero && numericValue === 0) return;
 
     handleChange({
@@ -31,22 +30,21 @@ export const NumberInput = ({
     !isNaN(numericValue) && (numericValue < min || numericValue > max);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-      <label htmlFor={name}>{label}</label>
+    <div className="input">
+      <label htmlFor={name} className="input__label">
+        {label}
+      </label>
       <input
         name={name}
         value={value}
         onChange={handleLocalChange}
         inputMode="decimal"
-        style={{
-          border: isOutOfRange ? "2px solid red" : "1px solid #ccc",
-          borderRadius: "4px",
-          padding: "4px 8px",
-          outline: "none",
-        }}
+        className={`input__field ${
+          isOutOfRange ? "input__field--error" : ""
+        }`}
       />
       {isOutOfRange && (
-        <span style={{ color: "red", fontSize: "12px" }}>
+        <span className="input__error">
           Значение должно быть между {min} и {max}
         </span>
       )}

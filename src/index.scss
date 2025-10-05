@@ -1,0 +1,30 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 4px;
+  }
+
+  &__field {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-color: #1976d2;
+    }
+
+    &--error {
+      border: 2px solid red;
+    }
+  }
+
+  &__error {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+}

@@ -9,6 +9,8 @@ export const Form = () => {
     age: '',
   })
 
+  console.log('formFields', formFields)
+
   const handleChange = (event) => {
     const {value, name} = event.target
     

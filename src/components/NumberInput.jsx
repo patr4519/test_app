@@ -7,6 +7,8 @@ export const NumberInput = ({
   max = 500,
   allowFloat = false,
   allowZero = true,
+  disabled = false,
+  required = false, 
 }) => {
   const handleLocalChange = (event) => {
     const newValue = event.target.value;
@@ -39,6 +41,8 @@ export const NumberInput = ({
         value={value}
         onChange={handleLocalChange}
         inputMode="decimal"
+        disabled={disabled}
+        required={required}
         className={`input__field ${
           isOutOfRange ? "input__field--error" : ""
         }`}

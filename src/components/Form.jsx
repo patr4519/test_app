@@ -9,7 +9,6 @@ export const Form = () => {
     age: 20,
   })
 
-  console.log('formFields', formFields)
 
   const handleChange = (event) => {
     const {value, name} = event.target
@@ -20,11 +19,18 @@ export const Form = () => {
     }))
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    
+    console.log(formFields)
+  }
+
   return (
-    <div style={{display: 'flex', flexDirection: 'column', width: '30%'}}>
+    <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', width: '30%'}}>
         <TextInput value={formFields.firstName} handleChange={handleChange} name='firstName' label='First name: ' />
         <TextInput value={formFields.secondName} handleChange={handleChange} name='secondName' label='Second name: ' />
-        <NumberInput value={formFields.age} handleChange={handleChange} name='age' label='Age: '/>
-    </div>
+        <NumberInput value={formFields.age} handleChange={handleChange} name='age' label='Age: ' required/>
+        <button type="submit">Submit</button>
+    </form>
   )
 }

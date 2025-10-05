@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { TextInput } from "./TextInput"
+import { NumberInput } from "./NumberInput"
 
 export const Form = () => {
   const [formFields, setFormFields] = useState({
@@ -18,14 +20,9 @@ export const Form = () => {
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', width: '30%'}}>
-        <label htmlFor='firstName'>First name:</label>
-        <input type="text" name='firstName' value={formFields.firstName} onChange={handleChange}/>
-
-        <label htmlFor='secondName'>Second name:</label>
-        <input type="text" name='secondName' value={formFields.secondName} onChange={handleChange}/>
-
-        <label htmlFor='age'>Age:</label>
-        <input type="number" name='age' value={formFields.age} onChange={handleChange}/>
+        <TextInput value={formFields.firstName} handleChange={handleChange} name='firstName' label='First name: ' />
+        <TextInput value={formFields.secondName} handleChange={handleChange} name='secondName' label='Second name: ' />
+        <NumberInput value={formFields.age} handleChange={handleChange} name='age' label='Age: '/>
     </div>
   )
 }

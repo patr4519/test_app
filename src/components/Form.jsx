@@ -6,7 +6,7 @@ export const Form = () => {
   const [formFields, setFormFields] = useState({
     firstName: '',
     secondName: '',
-    age: '',
+    age: null,
   })
 
   console.log('formFields', formFields)

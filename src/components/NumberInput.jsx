@@ -3,7 +3,7 @@ export const NumberInput = ({
   value,
   handleChange,
   label,
-  min = -500,
+  min = 1,
   max = 500,
   allowFloat = false,
   allowZero = true,
@@ -34,7 +34,6 @@ export const NumberInput = ({
     <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
       <label htmlFor={name}>{label}</label>
       <input
-        type="text"
         name={name}
         value={value}
         onChange={handleLocalChange}

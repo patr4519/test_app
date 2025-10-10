@@ -1,50 +1,50 @@
 .input {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  &__label {
-    margin-bottom: 4px;
-  }
+	&__label {
+		margin-bottom: 4px;
+	}
 
-  &__field {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px 8px;
-    outline: none;
-    transition: border-color 0.2s ease;
+	&__field {
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		padding: 4px 8px;
+		outline: none;
+		transition: border-color 0.2s ease;
 
-    &:focus {
-      border-color: #1976d2;
-    }
+		&:focus {
+			border-color: #1976d2;
+		}
 
-    &--error {
-      border: 2px solid red;
-    }
-  }
+		&--error {
+			border: 2px solid red;
+		}
+	}
 
-  &__error {
-    color: red;
-    font-size: 12px;
-    margin-top: 2px;
-  }
+	&__error {
+		color: red;
+		font-size: 12px;
+		margin-top: 2px;
+	}
 
-  &--checkbox {
-    flex-direction: row;
-    align-items: center;
+	&--checkbox {
+		flex-direction: row;
+		align-items: center;
 
-    .input__label {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      gap: 6px;
-      user-select: none;
-    }
+		.input__label {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			gap: 6px;
+			user-select: none;
+		}
 
-    .input__checkbox {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-      accent-color: #1976d2;
-    }
-  }
+		.input__checkbox {
+			width: 16px;
+			height: 16px;
+			cursor: pointer;
+			accent-color: #1976d2;
+		}
+	}
 }

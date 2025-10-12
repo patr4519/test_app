@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { TextInput } from "./TextInput";
-import { NumberInput } from "./NumberInput";
+
 import { CheckboxInput } from "./CheckboxInput";
+import { NumberInput } from "./NumberInput";
+import { TextInput } from "./TextInput";
 
 export const Form = () => {
 	const [formFields, setFormFields] = useState({
